@@ -1,0 +1,24 @@
+.table-container {
+  height: 400px;
+  overflow: auto;
+  table {
+    width: 100%;
+    th,
+    td {
+      padding-right: 10px !important;
+    }
+  }
+
+  .mat-column-checkbox {
+    width: 2em;
+  }
+  .mat-column-position {
+    width: 2em;
+  }
+  .mat-column-weight {
+    width: 5em;
+  }
+  .mat-column-symbol {
+    width: 5em;
+  }
+}

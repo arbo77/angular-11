@@ -1,0 +1,8 @@
+<scf-table-invoice (onDataChanges)="onDataChanges($event)"></scf-table-invoice>
+
+<mat-card-actions>
+  <button mat-stroked-button cdkFocusInitial [mat-dialog-close]>Close</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="selectedItems">
+    Select
+  </button>
+</mat-card-actions>

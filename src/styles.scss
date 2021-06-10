@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+$bo-scf-web-typography: mat-typography-config(
+  $font-family: 'Lato, Roboto, "Helvetica Neue", sans-serif',
+  $display-4: mat-typography-level(112px, 112px, 300),
+  $display-3: mat-typography-level(56px, 56px, 400),
+  $display-2: mat-typography-level(45px, 48px, 400),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(20px, 32px, 500),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(16px, 1.25, 400),
+);
+
+@include mat-core($bo-scf-web-typography);
+$bo-scf-web-primary: mat-palette($mat-indigo);
+$bo-scf-web-accent: mat-palette($mat-pink, A200, A100, A400);
+$bo-scf-web-warn: mat-palette($mat-red);
+$bo-scf-web-theme: mat-light-theme(
+  (
+    color: (
+      primary: $bo-scf-web-primary,
+      accent: $bo-scf-web-accent,
+      warn: $bo-scf-web-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($bo-scf-web-theme);
+
+/* start of material table */
+.mat-header-cell {
+  font-weight: bold;
+  font-size: inherit;
+  color: #fff;
+  background-color: #3f51b5;
+}
+.mat-sort-header-arrow {
+  color: #fff;
+}
+tr.mat-row {
+  height: 3em !important;
+}
+/* end of material table */
+.mat-card-content {
+  .mat-form-field {
+    margin-bottom: 1em;
+  }
+}
+.mat-card-actions {
+  margin-top: 1em;
+  display: block;
+}
+.mat-table {
+  .selected {
+    background-color: #e9eef3;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+button + button {
+  margin-left: 1em !important;
+}
